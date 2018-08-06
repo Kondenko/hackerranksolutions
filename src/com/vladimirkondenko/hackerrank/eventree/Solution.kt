@@ -1,7 +1,8 @@
 package com.vladimirkondenko.hackerrank.eventree
 
+import java.lang.Math.max
+import java.lang.Math.min
 import java.util.*
-import kotlin.collections.ArrayList
 
 val debug = true
 
@@ -16,7 +17,7 @@ fun main(args: Array<String>) {
     println(tree.solveEvenTree())
 }
 
-class Tree(val V: Int, val E: Int, private var connections: Array<ArrayList<Int>> = Array(V + 1) { _ -> ArrayList<Int>() }) {
+class Tree(val V: Int, val E: Int, private var connections: Array<ArrayList<Int>> = Array(V + 1) { ArrayList<Int>() }) {
 
     fun solveEvenTree(): Int {
         var result = 0
@@ -69,13 +70,13 @@ class Tree(val V: Int, val E: Int, private var connections: Array<ArrayList<Int>
     }
 
     fun connect(u: Int, v: Int) {
-        connections[minOf(u, v)].add(maxOf(u, v))
+        connections[min(u, v)].add(max(u, v))
     }
 
     fun disconnect(u: Int, v: Int) {
         if (u != 0 && v != 0)
         pr("Disconnecting $u and $v")
-        connections[minOf(u, v)].remove(maxOf(u, v))
+        connections[min(u, v)].remove(max(u, v))
     }
 
     override fun toString(): String {

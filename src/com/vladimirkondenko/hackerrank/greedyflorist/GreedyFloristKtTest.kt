@@ -1,10 +1,10 @@
 package com.vladimirkondenko.hackerrank.greedyflorist
 
 import com.vladimirkondenko.hackerrank.readInt
+import org.junit.Assert.assertEquals
 import org.junit.Test
 import java.io.File
 import java.util.*
-import kotlin.test.assertEquals
 
 class GreedyFloristKtTest {
 

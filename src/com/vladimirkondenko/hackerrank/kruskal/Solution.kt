@@ -1,9 +1,6 @@
 package com.vladimirkondenko.hackerrank.kruskalmstrsub
 
 import java.util.*
-import kotlin.collections.ArrayList
-import kotlin.coroutines.experimental.EmptyCoroutineContext.plus
-import kotlin.text.StringBuilder
 
 object Solution {
 
@@ -19,7 +16,7 @@ object Solution {
 
         init {
             pr("Creating UnionFind with $count elements")
-            for (i in 0..count - 1) id[i] = i
+            for (i in 0 until count) id[i] = i
         }
 
         fun connected(p: Int, q: Int): Boolean {
@@ -35,7 +32,7 @@ object Solution {
             val pId = find(p)
             val qId = find(q)
             if (pId == qId) return
-            for (i in 0..id.size - 1) if (id[i] == pId) id[i] = qId
+            for (i in 0 until id.size) if (id[i] == pId) id[i] = qId
             count--
         }
 
@@ -85,7 +82,7 @@ object Solution {
         val n = scanner.nextInt() // vertices
         val m = scanner.nextInt() // connections
         val edges = ArrayList<Edge>(m)
-        for (i in 0..m - 1) {
+        for (i in 0 until m) {
             edges.add(Edge(scanner.nextInt(), scanner.nextInt(), scanner.nextInt()))
         }
         val graph = Graph(n, m, edges)
@@ -95,7 +92,7 @@ object Solution {
 
     fun <T : Comparable<T>> ArrayList<T>. sortImmutable(): ArrayList<T> {
         val sortedArray = this
-        Collections.sort(sortedArray)
+        sortedArray.sort()
         return sortedArray
     }
 
