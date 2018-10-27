@@ -1,5 +1,6 @@
 package com.vladimirkondenko.hackerrank.marcscakewalk
 
+import com.vladimirkondenko.hackerrank.pow
 import java.util.*
 
 fun main(args: Array<String>) {
@@ -25,4 +26,3 @@ fun cakewalk(arr: IntArray): Long {
 
 fun calories(j: Int, c: Int) = (2 pow j) * c
 
-infix fun Int.pow(pow: Int) = Math.pow(this.toDouble(), pow.toDouble())

@@ -1,6 +1,5 @@
 package com.vladimirkondenko.hackerrank.greedyflorist
 
-import com.vladimirkondenko.hackerrank.immutableSort
 import java.util.*
 
 fun main(args: Array<String>) {
@@ -16,7 +15,7 @@ fun input(scanner: Scanner): Int {
 
 fun greedyFlorist(n: Int, k: Int, c: IntArray): Int {
 //    if (k >= n) return c.sum()
-    val sorted = c.immutableSort()
+    val sorted = c.sorted()
     var result = 0
     var x = 1
     var i = n
