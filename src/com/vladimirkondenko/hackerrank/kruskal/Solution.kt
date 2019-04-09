@@ -48,7 +48,7 @@ object Solution {
             pr("Finding MST in $this")
             val mst = Graph(V, 0)
             val unionFind = UnionFind(V)
-            val sortedEdges = edges.sortImmutable()
+            val sortedEdges = edges.sorted()
             sortedEdges.forEach { edge ->
                 pr("Checking $edge")
                 if (!unionFind.connected(edge.src, edge.dest)) {
@@ -58,7 +58,7 @@ object Solution {
                     if (mst.E >= V - 1) return mst
                 }
             }
-            return mst;
+            return mst
         }
 
         fun addEdge(edge: Edge) {
@@ -88,12 +88,6 @@ object Solution {
         val graph = Graph(n, m, edges)
         val msp = graph.minimumSpanningTree()
         println(msp.totalWeight())
-    }
-
-    fun <T : Comparable<T>> ArrayList<T>. sortImmutable(): ArrayList<T> {
-        val sortedArray = this
-        sortedArray.sort()
-        return sortedArray
     }
 
 }
