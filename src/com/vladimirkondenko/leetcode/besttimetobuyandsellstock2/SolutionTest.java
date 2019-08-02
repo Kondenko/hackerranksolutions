@@ -1,4 +1,4 @@
-package com.vladimirkondenko.leetcode.besttimetobuyandsellstock;
+package com.vladimirkondenko.leetcode.besttimetobuyandsellstock2;
 
 import org.junit.Test;
 

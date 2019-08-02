@@ -1,4 +1,4 @@
-package com.vladimirkondenko.leetcode.besttimetobuyandsellstock;
+package com.vladimirkondenko.leetcode.besttimetobuyandsellstock2;
 
 /**
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/
